@@ -11,6 +11,11 @@ import java.util.Map;
 public class Receiver {
     @RabbitHandler
     public void process(Map<Object, Object> o) {
+
         System.out.println("Receiver : " + o.toString());
+
+        System.out.println("Receiver : " + o.get("path"));
+        System.out.println("Receiver : " + o.get("url"));
     }
+
 }
